@@ -6,9 +6,10 @@ struct mouselockApp: App {
     @StateObject var appState = AppState.shared
     
     var body: some Scene {
-        WindowGroup {
+        MenuBarExtra("Mouselock", systemImage: "lock.circle") {
             ContentView(appState: appState)
         }
+        .menuBarExtraStyle(.window)
     }
 }
 
