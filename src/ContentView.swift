@@ -1,4 +1,5 @@
 import SwiftUI
+import LaunchAtLogin
 
 struct ContentView: View {
     @StateObject var appState: AppState
@@ -32,6 +33,10 @@ struct ContentView: View {
                     ))
                 }
             }
+            
+            // Launch on login section
+            Divider().padding(.vertical, 8)
+            LaunchAtLogin.Toggle()
             
             // Quit button
             Divider().padding(.vertical, 8)

@@ -11,6 +11,7 @@
 		0E577D8B27BD9D5F002B61CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E577D8A27BD9D5F002B61CC /* ContentView.swift */; };
 		0E8210F227CD81D000DB2E0B /* CGKeyCodeInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8210F127CD81D000DB2E0B /* CGKeyCodeInitializers.swift */; };
 		0E96FDD12917F00500D67A09 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E96FDD02917F00500D67A09 /* Media.xcassets */; };
+		C3CD38702EE70B23001E3ACD /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C3CD386F2EE70B23001E3ACD /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CD38702EE70B23001E3ACD /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,9 @@
 				Base,
 			);
 			mainGroup = 0E577D7C27BD9D5F002B61CC;
+			packageReferences = (
+				C3CD386E2EE70B23001E3ACD /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 0E577D8627BD9D5F002B61CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3CD386E2EE70B23001E3ACD /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3CD386F2EE70B23001E3ACD /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3CD386E2EE70B23001E3ACD /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E577D7D27BD9D5F002B61CC /* Project object */;
 }
