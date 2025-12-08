@@ -26,9 +26,6 @@ class AppState: ObservableObject {
     @Published var height: String = UserDefaults.standard.string(forKey: "height") ?? "1080" {
         didSet {UserDefaults.standard.set(self.height, forKey: "height")}
     };
-    @Published var active: Bool = UserDefaults.standard.bool(forKey: "active") {
-        didSet {UserDefaults.standard.set(self.active, forKey: "active")}
-    };
     @Published var activegames: Dictionary<String, Bool> = UserDefaults.standard.dictionary(forKey: "activegames") as? [String: Bool] ?? [:] {
         didSet {UserDefaults.standard.set(self.activegames, forKey: "activegames")}
     };
@@ -57,8 +54,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
             
-            // pause if not activated
-            if (AppState.shared.active == false && (AppState.shared.activegames[(NSWorkspace().frontmostApplication?.bundleIdentifier ?? "")] ?? false) == false) {
+            // pause if not activated for current app
+            if ((AppState.shared.activegames[(NSWorkspace().frontmostApplication?.bundleIdentifier ?? "")] ?? false) == false) {
                 return;
             }
             
